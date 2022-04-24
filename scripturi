@@ -1,0 +1,96 @@
+// let firstVariable=false;
+// let secondVariable= false;
+
+// function checkVariable(param1,param2){
+//     if(firstVariable){
+//         param2({
+//             name:'george',
+//             wishes:'to die'
+//         })
+//     }
+//         else if(secondVariable){
+//             param2({
+//                 name:'lucy',
+//                 wishes:'to fuck'
+//             })
+//         }
+//             else{
+//                 param1('no other reason to live')
+//         }
+//     }
+
+// checkVariable((ex)=>{console.log(ex)},(name)=>{console.log(name.name)});
+
+// let stocks ={
+//     fruits:["strawbery","apple","banana","grapes"],
+//     liquid:["water","ice","coffe","soda","tea"],
+//     holder:["cone","cup","stick"],
+//     toppings:["chocolate","peanuts"]
+// };
+
+// let order=(fruit_name,call_production)=>{
+//     setTimeout(()=>{console.log(`${stocks.fruits[fruit_name]} a fost selectat` );
+//     call_production();
+//     }, 2000);
+// }
+
+// let production=()=>{
+//     setTimeout(()=>{console.log("production has started");
+//     },0000);
+// };
+
+// order(0,production);
+// 
+              //     CALL BACK HELL
+
+// let order=(fruit_name,call_production)=>{
+    
+//     call_production()
+//     setTimeout(()=>{console.log(`${stocks.fruits[fruit_name]} a fost selectat` );
+//     ;}, 0000);
+// }
+
+// let production=()=>{
+//     setTimeout(()=>{console.log("productia va incepe");
+//     setTimeout(()=>{console.log('marul a fost preparat');
+//     setTimeout(()=>{console.log(`${stocks.liquid[0]} si ${stocks.liquid[1]} au fost adaugat la shake-ul dvs.` );
+//     setTimeout(()=>{console.log('masina de facut inghetata a pornit');
+//     setTimeout(()=>{console.log(` shake-ul a fost servit in ${stocks.holder[1]}`);
+//     setTimeout(()=>{console.log(`am ales topingul de  ${stocks.toppings[1]}`);
+//     setTimeout(()=>{console.log(`shake-ul dumneavoastra v-a fost servit.ENJOY!!!`);
+//                                 },1000)
+//                             },1000);
+//                         },1000); 
+//                 },1000);   
+//             },1000);
+//         },2000);
+//     },1000);
+// };
+// console.log("pagina a fost incarcata, asteptam setTimeout-ul")
+// order(1,production);
+
+//         PROMISES
+// let stocks ={
+//     fruits:["strawbery","apple","banana","grapes"],
+//     liquid:["water","ice","coffe","soda","tea"],
+//     holder:["cone","cup","stick"],
+//     toppings:["chocolate","peanuts"]
+// };
+
+// let is_the_shop_open=true;
+
+// let order =(time,work)=>{
+//   return  new Promise((resolve,reject)=>{
+//         if(is_the_shop_open){
+//             setTimeout(()=>{ resolve(work())},time);
+//         }
+//         else{
+//             reject(console.log("our shop is closed"))
+//         }
+//     })
+// }
+// order(2000,()=>console.log(`${stocks.fruits[1]} a fost selectat`))
+//     .then(()=>{  return order(2000,()=>console.log(`productia shake-ului a inceput`));})
+//     .then(()=>{})
+
+
